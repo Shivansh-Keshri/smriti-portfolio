@@ -9,66 +9,89 @@
     <link rel="icon" href="./images/logo.png" type="./images/logo.png">
 </head>
 <body class="__variable_1e4310 __variable_c3aa02 bg-[#030014] overflow-y-scroll overflow-x-hidden ">
-    <nav class="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
-        <div class="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-            <a href="" class="h-auto w-auto flex flex-row items-center cursor-pointer">
-                <img width="40" height="40" src="images/logo.png" alt="s-symbol"/>
-
-            </a>
-            <div class="md:hidden flex items-center">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
-                        <line x1="4" x2="20" y1="12" y2="12"></line>
-                        <line x1="4" x2="20" y1="6" y2="6"></line>
-                        <line x1="4" x2="20" y1="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden md:flex flex-grow items-center justify-center">
-                <div class="flex items-center justify-between w-[500px] h-auto border border-[#7042f861] bg-[#0300145e] px-[20px] py-[10px] rounded-full text-gray-200">
-                    <a href="#home" class="cursor-pointer">Home</a><a href="#about" class="cursor-pointer">About</a>
-                    <a href="#skills" class="cursor-pointer">Skills</a><a href="#projects" class="cursor-pointer">Projects</a>
-                    <a href="#contact" class="cursor-pointer">Contact Us</a>
-                    <!-- <a href="" class="cursor-pointer" target="_blank">Resume</a> -->
-                </div>
-            </div>
-            <div class="hidden md:flex flex-row gap-4 md:gap-6">
-                <a href="https://www.linkedin.com/in/smriti-kumari-150a642a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                    <img width="25" height="25" src="https://img.icons8.com/external-regular-kawalan-studio/50/FFFFFF/external-linkedin-social-media-regular-kawalan-studio.png" alt="linkedin"/>
-                </a>
-                <a href="https://github.com/smi-riti">
-                    <img width="25" height="25" src="https://img.icons8.com/glyph-neue/64/FFFFFF/github.png" alt="github"/>
-                </a>
-                <a href="">
-                    <img width="25" height="25" src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png" alt="twitter"/>                </a>
+  <nav class="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
+    <div class="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
+        <a href="#" class="h-auto w-auto flex flex-row items-center cursor-pointer">
+            <img width="40" height="40" src="images/logo.png" alt="s-symbol"/>
+        </a>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex flex-grow items-center justify-center">
+            <div class="flex items-center justify-between w-[500px] h-auto border border-[#7042f861] bg-[#0300145e] px-[20px] py-[10px] rounded-full text-gray-200">
+                <a href="#home" class="cursor-pointer">Home</a>
+                <a href="#about" class="cursor-pointer">About</a>
+                <a href="#skills" class="cursor-pointer">Skills</a>
+                <a href="#projects" class="cursor-pointer">Projects</a>
+                <a href="#contact" class="cursor-pointer">Contact Us</a>
+                <!-- <a href="" class="cursor-pointer" target="_blank">Resume</a> -->
             </div>
         </div>
-    </nav>
+        <!-- Social Links -->
+        <div class="hidden md:flex flex-row gap-4 md:gap-6">
+            <a href="https://www.linkedin.com/in/smriti-kumari-150a642a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <img width="25" height="25" src="https://img.icons8.com/external-regular-kawalan-studio/50/FFFFFF/external-linkedin-social-media-regular-kawalan-studio.png" alt="linkedin"/>
+            </a>
+            <a href="https://github.com/smi-riti">
+                <img width="25" height="25" src="https://img.icons8.com/glyph-neue/64/FFFFFF/github.png" alt="github"/>
+            </a>
+            <a href="#">
+                <img width="25" height="25" src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v2.png" alt="twitter"/>
+            </a>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden flex-col items-center justify-center w-full bg-[#0300145e] text-gray-200 hidden">
+        <a href="#home" class="block py-2 px-4">Home</a>
+        <a href="#about" class="block py-2 px-4">About</a>
+        <a href="#skills" class="block py-2 px-4">Skills</a>
+        <a href="#projects" class="block py-2 px-4">Projects</a>
+        <a href="#contact" class="block py-2 px-4">Contact Us</a>
+    </div>
+</nav>
+
+<script>
+    // JavaScript to toggle the mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
     <main class="h-full w-full">
         <!-- ######################----------HOME SECTION-----------################################## -->
         <div class="flex flex-col">
-            <div class="relative flex flex-col h-full w-full left-0 z-[1] object-cover" id="home">
-                <div class="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]">
-                    <div class="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-                        <div class="Welcome-box w-44 py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9] flex rounded-full" style="opacity: 1; will-change: auto; transform: none;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="text-[#b49bff] mr-[10px] h-5 w-5">
-                                <path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z" clip-rule="evenodd"></path>
-                            </svg>
-                            <h1 class="Welcome-text text-[13px] font-medium text-white">A Web Developer</h1>
-                        </div>
-                        <div class="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto" style="opacity: 1; will-change: auto; transform: none;">
-                            <span>Providing<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"> <!-- -->the best<!-- --> </span>Services...</span>
-                        </div>
-                        <p class="text-lg text-gray-400 my-5 max-w-[600px] text-justify" style="opacity: 1; will-change: auto; transform: none;">
-                          Hello! I'm Smriti Kumari, a passionate web developer with expertise in both front-end and back-end technologies. Whether you need to enhance your web presence or develop a cutting-edge mobile app, I'm here to turn your vision into reality. Explore my work and let's connect to discuss how I can help you achieve your goals!
-                        </p>
-                    </div>
-                    <div class="w-full h-full flex justify-center items-center " style="opacity: 1; will-change: auto; transform: none;">
-                        <img alt="workn icons" loading="lazy" width="650" height="650" decoding="async" data-nimg="1" style="color:transparent" srcset="./images/mainIconsdark.png" src="./images/mainIconsdark.png">
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="relative flex flex-col h-full w-full left-0 z-[1] object-cover" id="home">
+              <div class="flex flex-col md:flex-row items-center justify-center px-4 md:px-20 mt-20 md:mt-40 w-full z-[20]">
+                  <div class="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+                      <div class="Welcome-box w-32 md:w-44 py-[8px] px-[12px] border border-[#7042f88b] opacity-[0.9] flex rounded-full">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="text-[#b49bff] mr-[10px] h-4 w-4 md:h-5 md:w-5">
+                              <path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z" clip-rule="evenodd"></path>
+                          </svg>
+                          <h1 class="Welcome-text text-[11px] md:text-[13px] font-medium text-white">A Web Developer</h1>
+                      </div>
+                      <div class="flex flex-col gap-4 md:gap-6 mt-4 md:mt-6 text-3xl md:text-6xl font-bold text-white max-w-full md:max-w-[600px] w-auto h-auto">
+                          <span>Providing<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"> the best </span>Services...</span>
+                      </div>
+                      <p class="text-sm md:text-lg text-gray-400 my-3 md:my-5 max-w-full md:max-w-[600px] text-justify">
+                        Hello! I'm Smriti Kumari, a passionate web developer with expertise in both front-end and back-end technologies. Whether you need to enhance your web presence or develop a cutting-edge mobile app, I'm here to turn your vision into reality. Explore my work and let's connect to discuss how I can help you achieve your goals!
+                      </p>
+                  </div>
+                  <div class="w-full h-full flex justify-center items-center mt-6 md:mt-0">
+                      <img alt="work icons" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-[200px] md:w-[650px] h-auto" src="./images/mainIconsdark.png">
+                  </div>
+              </div>
+          </div>
+      </div>
+      
         <!-- ######################----------ABOUT ME SECTION-----------################################## -->
         <div class="flex flex-col items-center justify-center" id="about">
             <h1 class="text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 pt-24 ">About Me</h1>
@@ -96,41 +119,41 @@
             </div>
         </div>
       <!-- ######################----------SKILLS SECTION-----------################################## -->
-        <section id="skills" class="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden" style="transform:scale(0.9)">
-          <div class="flex flex-col items-center justify-center" id="skills">
-            <h1 class="text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 pb-24">Skills</h1>
-            <div class="flex justify-center items-center gap-10 w-[x] h-10 mb-20">
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/icons8-html-50.png" class="object-contain w-full h-full">
-              </div>
-
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/icons8-css3-50.png" class="object-contain w-full h-full">
-              </div>
-
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/icons8-tailwindcss-50.png" class="object-contain w-full h-full">
-              </div>
-              
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/icons8-bootstrap-50.png" class="object-contain w-full h-full">
-              </div>
-
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/php.png" class="object-contain w-full h-full">
-              </div>
-
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/laravel.png" class="object-contain w-full h-full">
-              </div>
-
-              <div class="rounded-lg shadow-lg border border-white p-6 w-[90px] h-[90px]">
-                <img src="./images/icons8-mysql-24.png" class="object-contain w-full h-full">
-                 
-              </div>
+      <section id="skills" class="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden px-4 py-10">
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="text-3xl md:text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 pb-10 md:pb-24">Skills</h1>
+            <div class="flex flex-wrap justify-center items-center gap-5 md:gap-10 w-full max-w-[1200px]">
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/icons8-html-50.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/icons8-css3-50.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/icons8-tailwindcss-50.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/icons8-bootstrap-50.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/php.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/laravel.png" class="object-contain w-full h-full">
+                </div>
+    
+                <div class="rounded-lg shadow-lg border border-white p-4 md:p-6 w-[70px] h-[70px] md:w-[90px] md:h-[90px]">
+                    <img src="./images/icons8-mysql-24.png" class="object-contain w-full h-full">
+                </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
+    
       <!-- ######################----------PROJECTS SECTION-----------################################## -->
       <section class="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16" id="projects">
         <h2 class="text-3xl sm:text-[40px] bg-[#030014] relative z-10 font-bold px-4 py-2 w-max mx-auto text-center  sm:border-b-2 border-[#1788ae] text-white">
